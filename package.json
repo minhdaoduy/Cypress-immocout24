@@ -1,0 +1,30 @@
+{
+  "name": "cypress-immocout24",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "standard": {
+    "env": [
+      "browser",
+      "mocha"
+    ],
+    "globals": [
+      "cy",
+      "Cypress",
+      "expect",
+      "assert"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cypress": "^3.8.2",
+    "mocha": "^7.0.0"
+  }
+}
