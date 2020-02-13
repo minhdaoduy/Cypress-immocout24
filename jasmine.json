@@ -1,0 +1,9 @@
+{
+  "spec_files": [
+    "cypress/integration/sample_spec.js"
+  ],
+
+  "stopSpecOnExpectationFailure": false,
+
+  "random": false
+}

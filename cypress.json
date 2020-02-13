@@ -1,4 +1,5 @@
 {
   "projectId": "zhr6pi",
-  "baseUrl": "https://example.cypress.io"
+  "baseUrl": "https://example.cypress.io",
+  "spec_files": ["cypress/integration/sample_spec.js"]
 }
