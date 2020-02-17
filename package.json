@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:debug": "set DEBUG=cypress:*",
+    "main": "node $NODE_DEBUG_OPTION ./cypress/integration/sample_spec.js"
   },
   "standard": {
     "env": [
@@ -24,9 +26,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cypress": "^3.3.1",
     "cypress-multi-reporters": "^1.2.3",
     "cypress-slack-reporter": "0.2.6",
+    "eslint": "^6.8.0",
     "jasmine": "^3.5.0",
     "mocha-junit-reporters": "^1.23.6",
     "mochawesome": "^3.1.1",
@@ -35,6 +37,10 @@
     "npm-reinstall": "^3.1.0"
   },
   "devDependencies": {
-    "mocha": "^7.0.0"
+    "cross-env": "^7.0.0",
+    "cypress": "^4.0.2",
+    "mocha": "^7.0.0",
+    "node-inspect": "^1.11.6",
+    "sha256": "^0.2.0"
   }
 }
