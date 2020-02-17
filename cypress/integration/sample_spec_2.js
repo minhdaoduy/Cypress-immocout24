@@ -1,13 +1,4 @@
-// let chai = require('chai');
-// let expect = chai.expect;
-// let Cypress = require('../../node_modules/cypress/types/index.d.ts');
-// let cy = Cypress.cy;
-let sha256 = require('sha256');
-beforeEach(function () {
-    console.log('Start test ');
 
-    // cy.get('h1').invoke('text').as('text1');
-});
 describe('My First Test', function() {
 
     before(function () {
@@ -27,7 +18,6 @@ describe('My First Test', function() {
     it('verify text', async function() {
         // let element  = await cy.get('h1');
         // text = await element.text();
-        localStorage.debug = 'cypress*';
         console.log('text1: ' + this.text1);
         expect('Kitchen Sink').to.equal(this.text1)
     });

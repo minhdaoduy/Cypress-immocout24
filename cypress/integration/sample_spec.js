@@ -1,8 +1,3 @@
-// let chai = require('chai');
-// let expect = chai.expect;
-// let Cypress = require('../../node_modules/cypress/types/index.d.ts');
-// let cy = Cypress.cy;
-
 describe('My First Test', function() {
     let text4 = '';
     async function test(par1, par2) {
