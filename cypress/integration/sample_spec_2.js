@@ -1,4 +1,4 @@
-
+let title;
 describe('My First Test', function() {
 
     before(function () {
@@ -23,8 +23,9 @@ describe('My First Test', function() {
     });
 
     it('should edit a new item', async function() {
-        let title = await cy.get('h1');
+        title = await cy.get('h1');
         expect('Kitchen Sink').to.equal(title.text());
+        cy.log(title.text());
     });
 
     it('verify class', async function() {
@@ -35,6 +36,8 @@ describe('My First Test', function() {
     it('verify type attribute', async function() {
         let classTest = await cy.get('button[class="navbar-toggle collapsed"]');
         expect('button').to.equal(classTest.attr('type'));
+        cy.log('classTest.attr(\'type\')' + classTest.attr('type'));
+        cy.log(title.text());
     });
 
 });
