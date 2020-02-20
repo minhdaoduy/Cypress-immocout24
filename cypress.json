@@ -1,5 +1,5 @@
 {
   "projectId": "zhr6pi",
-  "baseUrl": "https://example.cypress.io",
+  "baseUrl": "https://www.immoscout24.ch",
   "spec_files": ["cypress/integration/sample_spec.js"]
 }
