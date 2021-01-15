@@ -1,5 +1,21 @@
 {
   "projectId": "zhr6pi",
   "baseUrl": "https://www.immoscout24.ch",
-  "spec_files": ["cypress/integration/sample_spec.js"]
+  "spec_files": ["cypress/integration/sample_spec.js"],
+  "db": {
+    "userName": "",
+    "password": "",
+    "server": "",
+    "options": {
+      "database": "",
+      "encrypt": true,
+      "rowCollectionOnRequestCompletion": true
+    }
+  },
+  "dbmysql": {
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": ""
+  }
 }
