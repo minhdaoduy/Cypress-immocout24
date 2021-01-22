@@ -2,20 +2,22 @@
   "projectId": "zhr6pi",
   "baseUrl": "https://www.immoscout24.ch",
   "spec_files": ["cypress/integration/sample_spec.js"],
+  "numTestsKeptInMemory": 10,
+  "defaultCommandTimeout": 30000,
+  "requestTimeout": 20000,
+  "responseTimeout": 60000,
   "db": {
-    "userName": "",
-    "password": "",
-    "server": "",
+    "userName": "sa_immoscout24",
+    "password": "6P#NHZ8v!W#VPF,CFjYC",
+    "server": "10.2.1.59",
     "options": {
-      "database": "",
-      "encrypt": true,
       "rowCollectionOnRequestCompletion": true
     }
   },
   "dbmysql": {
-    "host": "",
-    "user": "",
-    "password": "",
-    "database": ""
+    "host": "10.2.1.59",
+    "user": "sa_immoscout24",
+    "password": "6P#NHZ8v!W#VPF,CFjYC",
+    "database": "immoscout24"
   }
 }
