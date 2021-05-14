@@ -1,27 +1,22 @@
-import HomePage from './PageObjects/HomePage';
+import HomePage from "./PageObjects/HomePage";
 
-describe('Sign In', () => {
-    let home;
-    before(function () {
-        home = new HomePage();
-        home.visit();
-    });
+describe("Sign In", () => {
+  let home;
+  before(() => {
+    home = new HomePage();
+  });
+  beforeEach(() => {
+    home.visit();
+  });
 
-    it('sign in', () => {
+  it.only("sign in", () => {
+    const signIn = home.goToSignIn();
 
-        const signIn = home.goToSignIn();
+    signIn.fillEmail("daoduyminh@gmail.com").fillPassword("operation").submit();
+    home.verifyLoginSuccessfulByEmail("daoduyminh@gmail.com");
+  });
 
-        signIn
-            .fillEmail('daoduyminh@gmail.com')
-            .fillPassword('operation')
-            .submit();
-    });
-
-    it('should sign in with correct credentials', () => {
-        home.verifyLoginSuccessfulByEmail('daoduyminh@gmail.com');
-    });
-
-    it('should sign in with correct credentials', async() => {
-        cy.log('test')
-    });
+  it("should sign in with correct credentials", async () => {
+    home.verifyLoginSuccessfulByEmail("daoduyminh@gmail.com");
+  });
 });
