@@ -29,6 +29,16 @@ Cypress.Commands.add("input", (value, location) => {
   field.type(value);
 });
 
+Cypress.Commands.add("login", (value, location) => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+  cy.clearCookie('idsrv-is24-2')
+  cy.visit("")
+  cy.get("[name='Username']").type('minhdao')
+  cy.get("[name='Password']").type('5$Operation')
+  cy.get("[id='localLoginSubmit']").click()
+});
+
 Cypress.Commands.add("parseXlsx", (inputFile) => {
   return cy.task("parseXlsx", { filePath: inputFile });
 });

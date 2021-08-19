@@ -1,11 +1,16 @@
 {
   "projectId": "zhr6pi",
-  "baseUrl": "https://www.immoscout24.ch",
+  "baseUrl": "https://admin-int-05.immoscout24.ch",
   "spec_files": ["cypress/integration/sample_spec.js"],
   "numTestsKeptInMemory": 10,
-  "defaultCommandTimeout": 30000,
-  "requestTimeout": 20000,
-  "responseTimeout": 60000,
+  "defaultCommandTimeout": 300000000,
+  "requestTimeout": 200000000,
+  "responseTimeout": 60000000,
+  "watchForFileChanges": false,
+  "admin": {
+    "userName": "minhdao",
+    "password": "5$Operation"
+  },
   "db": {
     "userName": "sa_immoscout24",
     "password": "6P#NHZ8v!W#VPF,CFjYC",
@@ -19,5 +24,8 @@
     "user": "sa_immoscout24",
     "password": "6P#NHZ8v!W#VPF,CFjYC",
     "database": "immoscout24"
-  }
+  },
+  "chromeWebSecurity": false,
+  "waitForAnimations": true,
+  "screenshotsFolder": "cypress/snapshots/actual"
 }
