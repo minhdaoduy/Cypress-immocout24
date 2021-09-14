@@ -7,6 +7,7 @@
   "requestTimeout": 200000000,
   "responseTimeout": 60000000,
   "watchForFileChanges": false,
+  "redirectionLimit": 50,
   "admin": {
     "userName": "minhdao",
     "password": "5$Operation"

@@ -29,18 +29,23 @@
     "cypress-multi-reporters": "^1.2.3",
     "cypress-slack-reporter": "0.2.6",
     "eslint": "^6.8.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
     "jasmine": "^3.5.0",
     "mocha-junit-reporters": "^1.23.6",
     "mochawesome": "^6.2.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
-    "npm-reinstall": "^3.1.0"
+    "nodemailer": "^6.6.3",
+    "npm-reinstall": "^3.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "cypress": "^6.9.1",
+    "@testing-library/cypress": "^8.0.1",
+    "cypress": "^8.3.1",
     "cypress-sql-server": "^1.0.0",
-    "mocha": "^8.2.1",
+    "mocha": "^8.4.0",
     "mysql": "^2.18.1",
-    "node-xlsx": "^0.16.1"
+    "n": "^7.3.1",
+    "node-xlsx": "^0.17.1"
   }
 }

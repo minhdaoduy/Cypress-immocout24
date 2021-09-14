@@ -16,6 +16,9 @@ const path = require("path");
 const sqlServer = require("cypress-sql-server");
 const dbConfig = require("../../cypress.json");
 const mysql = require("mysql");
+
+const makeEmailAccount = require("./email-account");
+
 function queryTestDb(query, config) {
   // creates a new mysql connection using credentials from cypress.json env's
   const connection = mysql.createConnection(dbConfig.dbmysql);
@@ -34,7 +37,7 @@ function queryTestDb(query, config) {
   });
 }
 
-module.exports = (on, config) => {
+module.exports = async (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   tasks = sqlServer.loadDBPlugin(dbConfig.db);
@@ -57,4 +60,39 @@ module.exports = (on, config) => {
       });
     },
   });
+
+  const emailAccount = await makeEmailAccount();
+
+  on("task", {
+    getUserEmail() {
+      return emailAccount.email;
+    },
+    getPass() {
+      return emailAccount.pass;
+    },
+
+    getLastEmail() {
+      return emailAccount.getLastEmail();
+    },
+  });
+
+  // important: return the changed config
+  return config;
 };
+
+// module.exports = async (on, config) => {
+//   const emailAccount = await makeEmailAccount();
+
+//   on("task", {
+//     getUserEmail() {
+//       return emailAccount.email;
+//     },
+
+//     getLastEmail() {
+//       return emailAccount.getLastEmail();
+//     },
+//   });
+
+//   // important: return the changed config
+//   return config;
+// };
